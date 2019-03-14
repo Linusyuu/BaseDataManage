@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11E738A1-DEC8-4F7C-86FF-86202C7E0307}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BaseForm</RootNamespace>
+    <AssemblyName>BaseDataManage</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="com.zstu.medical, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\20190110\com.zstu.medical.dll</HintPath>
+    </Reference>
+    <Reference Include="com.zstu.medical.dynamic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\20190110\com.zstu.medical.dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Dicom">
+      <HintPath>..\..\..\20190110\Dicom.dll</HintPath>
+    </Reference>
+    <Reference Include="Dicom.Native">
+      <HintPath>..\..\..\20190110\Dicom.Native.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin4, Version=2006.3.22.45, Culture=neutral, PublicKeyToken=127be25a6db25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="Login, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Login\Login\bin\Debug\Login.dll</HintPath>
+    </Reference>
+    <Reference Include="NPinyin, Version=0.2.4588.20158, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\NPinyin.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLDBBase">
+      <HintPath>..\..\SQLDBBase\SQLDBBase\bin\Debug\SQLDBBase.dll</HintPath>
+    </Reference>
+    <Reference Include="SysData">
+      <HintPath>..\..\SysData\SysData\bin\Debug\SysData.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDataManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseDataManage.Designer.cs">
+      <DependentUpon>BaseDataManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaseDataManage.resx">
+      <DependentUpon>BaseDataManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\add-list.png" />
+    <Content Include="Resources\Angiography.png" />
+    <Content Include="Resources\ascending.png" />
+    <Content Include="Resources\BackDialog.jpg" />
+    <Content Include="Resources\binoculars.png" />
+    <Content Include="Resources\cancel.png" />
+    <Content Include="Resources\check-mark.png" />
+    <Content Include="Resources\close.png" />
+    <None Include="Resources\close1.png" />
+    <Content Include="Resources\cursor.png" />
+    <Content Include="Resources\decending.png" />
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\DeselectAll.png" />
+    <Content Include="Resources\designer.png" />
+    <Content Include="Resources\detailview.png" />
+    <Content Include="Resources\doctor.png" />
+    <Content Include="Resources\edit.png" />
+    <Content Include="Resources\equipment.png" />
+    <Content Include="Resources\FFR.png" />
+    <Content Include="Resources\find.png" />
+    <Content Include="Resources\IVUS.png" />
+    <Content Include="Resources\listview.png" />
+    <Content Include="Resources\medicine.png" />
+    <Content Include="Resources\new-file.png" />
+    <Content Include="Resources\New.png" />
+    <Content Include="Resources\nurse.png" />
+    <Content Include="Resources\OCT.png" />
+    <Content Include="Resources\OpenFile.png" />
+    <Content Include="Resources\patient.png" />
+    <Content Include="Resources\PCI.png" />
+    <Content Include="Resources\plus.png" />
+    <Content Include="Resources\preview.png" />
+    <Content Include="Resources\property.png" />
+    <Content Include="Resources\refresh.png" />
+    <Content Include="Resources\refresh4.png" />
+    <Content Include="Resources\report32.png" />
+    <Content Include="Resources\ReportExplorer.png" />
+    <Content Include="Resources\Run.png" />
+    <Content Include="Resources\save.png" />
+    <Content Include="Resources\searchbox.png" />
+    <Content Include="Resources\searchpanel.png" />
+    <Content Include="Resources\SelectAll.png" />
+    <Content Include="Resources\Template32.png" />
+    <Content Include="Resources\TemplateDesigner.png" />
+    <Content Include="Resources\TemplateExplorer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
